@@ -39,14 +39,30 @@ public class ImportHelper {
 
                 String convertedLine = "";
 
-                for (int i = 0; i < elements.length; i++) {
+                convertedLine = convertedLine + parseCapShape(elements[1]);
+                convertedLine = convertedLine + parseCapSurface(elements[2]);
+                convertedLine = convertedLine + parseCapColor(elements[3]);
+                convertedLine = convertedLine + parseBruises(elements[4]);
+                convertedLine = convertedLine + parseOdor(elements[5]);
+                convertedLine = convertedLine + parseGillAtachement(elements[6]);
+                convertedLine = convertedLine + parseGillSpacing(elements[7]);
+                convertedLine = convertedLine + parseGillSize(elements[8]);
+                convertedLine = convertedLine + parseGillColor(elements[9]);
+                convertedLine = convertedLine + parseStalkShape(elements[10]);
+                convertedLine = convertedLine + parseStalkRoot(elements[11]);
+                convertedLine = convertedLine + parseStalkSurface(elements[12]);
+                convertedLine = convertedLine + parseStalkSurface(elements[13]);
+                convertedLine = convertedLine + parseStalkColor(elements[14]);
+                convertedLine = convertedLine + parseStalkColor(elements[15]);
+                convertedLine = convertedLine + parseVeilType(elements[16]);
+                convertedLine = convertedLine + parseVeilColor(elements[17]);
+                convertedLine = convertedLine + parseRingNumber(elements[18]);
+                convertedLine = convertedLine + parseRingType(elements[19]);
+                convertedLine = convertedLine + parseSporePrintColor(elements[20]);
+                convertedLine = convertedLine + parsePopulation(elements[21]);
+                convertedLine = convertedLine + parseHabitat(elements[22]);
 
-                }
-
-
-
-                printWriter.println(dis.readLine());
-
+                printWriter.println(convertedLine);
             }
 
             // dispose all the resources after using them.
@@ -64,7 +80,7 @@ public class ImportHelper {
 
     }
 
-    private String parseCapShape(String attribute) {
+    private static String parseCapShape(String attribute) {
         switch (attribute) {
             case "b": return "1,0,0,0,0,0,";
             case "c": return "0,1,0,0,0,0,";
@@ -76,7 +92,7 @@ public class ImportHelper {
         }
     }
 
-    private String parseCapSurface(String attribute) {
+    private static String parseCapSurface(String attribute) {
         switch (attribute) {
             case "f": return "1,0,0,0,";
             case "g": return "0,1,0,0,";
@@ -86,7 +102,7 @@ public class ImportHelper {
         }
     }
 
-    private String parseCapColor(String attribute) {
+    private static String parseCapColor(String attribute) {
         switch (attribute) {
             case "n": return "1,0,0,0,0,0,0,0,0,0,";
             case "b": return "0,1,0,0,0,0,0,0,0,0,";
@@ -102,19 +118,19 @@ public class ImportHelper {
         }
     }
 
-    private String parseHabitat(String attribute) {
+    private static String parseHabitat(String attribute) {
         switch (attribute) {
-            case "g": return "1,0,0,0,0,0,0,";
-            case "l": return "0,1,0,0,0,0,0,";
-            case "m": return "0,0,1,0,0,0,0,";
-            case "p": return "0,0,0,1,0,0,0,";
-            case "u": return "0,0,0,0,1,0,0,";
-            case "w": return "0,0,0,0,0,1,0,";
-            case "d": return "0,0,0,0,0,0,1,";
-            default: return "0,0,0,0,0,0,0,";
+            case "g": return "1,0,0,0,0,0,0";
+            case "l": return "0,1,0,0,0,0,0";
+            case "m": return "0,0,1,0,0,0,0";
+            case "p": return "0,0,0,1,0,0,0";
+            case "u": return "0,0,0,0,1,0,0";
+            case "w": return "0,0,0,0,0,1,0";
+            case "d": return "0,0,0,0,0,0,1";
+            default: return "0,0,0,0,0,0,0";
         }
     }
-    private String parsePopulation(String attribute) {
+    private static String parsePopulation(String attribute) {
         switch (attribute) {
             case "a": return "1,0,0,0,0,0,";
             case "c": return "0,1,0,0,0,0,";
@@ -125,7 +141,7 @@ public class ImportHelper {
             default: return "0,0,0,0,0,0,";
         }
     }
-    private String parseSporePrintColor(String attribute) {
+    private static String parseSporePrintColor(String attribute) {
         switch (attribute) {
             case "k": return "1,0,0,0,0,0,0,0,0,";
             case "n": return "0,1,0,0,0,0,0,0,0,";
@@ -139,7 +155,7 @@ public class ImportHelper {
             default: return "0,0,0,0,0,0,0,0,0,";
         }
     }
-    private String parseRingType(String attribute) {
+    private static String parseRingType(String attribute) {
         switch (attribute) {
             case "c": return "1,0,0,0,0,0,0,0,";
             case "e": return "0,1,0,0,0,0,0,0,";
@@ -152,7 +168,7 @@ public class ImportHelper {
             default: return "0,0,0,0,0,0,0,0,";
         }
     }
-    private String parseRingNumber(String attribute) {
+    private static String parseRingNumber(String attribute) {
         switch (attribute) {
             case "n": return "1,0,0,";
             case "o": return "0,1,0,";
@@ -160,7 +176,7 @@ public class ImportHelper {
             default: return "0,0,0,";
         }
     }
-    private String parseVeilColor(String attribute) {
+    private static String parseVeilColor(String attribute) {
         switch (attribute) {
             case "n": return "1,0,0,0,";
             case "o": return "0,1,0,0,";
@@ -169,14 +185,14 @@ public class ImportHelper {
             default: return "0,0,0,0,";
         }
     }
-    private String parseVeilType(String attribute) {
+    private static String parseVeilType(String attribute) {
         switch (attribute) {
             case "p": return "1,0,";
             case "u": return "0,1,";
             default: return "0,0,";
         }
     }
-    private String parseStalkColor(String attribute) {
+    private static String parseStalkColor(String attribute) {
         switch (attribute) {
             case "n": return "1,0,0,0,0,0,0,0,0,";
             case "b": return "0,1,0,0,0,0,0,0,0,";
@@ -191,7 +207,7 @@ public class ImportHelper {
         }
     }
 
-    private String parseBruises(String attribute) {
+    private static String parseBruises(String attribute) {
         switch (attribute) {
             case "t": return "1,";
             case "f": return "0,";
@@ -199,7 +215,7 @@ public class ImportHelper {
         }
     }
 
-    private String parseOdor(String attribute) {
+    private static String parseOdor(String attribute) {
         switch (attribute) {
             case "a": return "1,0,0,0,0,0,0,0,0,";
             case "l": return "0,1,0,0,0,0,0,0,0,";
@@ -214,7 +230,7 @@ public class ImportHelper {
         }
     }
 
-    private String parseGillAtachement(String attribute) {
+    private static String parseGillAtachement(String attribute) {
         switch (attribute) {
             case "a": return "1,0,0,0,";
             case "d": return "0,1,0,0,";
@@ -224,7 +240,7 @@ public class ImportHelper {
         }
     }
 
-    private String parseGillSpacing(String attribute) {
+    private static String parseGillSpacing(String attribute) {
         switch (attribute) {
             case "c": return "1,0,0,";
             case "w": return "0,1,0,";
@@ -233,7 +249,7 @@ public class ImportHelper {
         }
     }
 
-    private String parseGillSize(String attribute) {
+    private static String parseGillSize(String attribute) {
         switch (attribute) {
             case "b": return "1,";
             case "n": return "0,";
@@ -241,7 +257,7 @@ public class ImportHelper {
         }
     }
 
-    private String parseGillColor(String attribute) {
+    private static String parseGillColor(String attribute) {
         switch (attribute) {
             case "k": return "1,0,0,0,0,0,0,0,0,0,0,0,";
             case "n": return "0,1,0,0,0,0,0,0,0,0,0,0,";
@@ -259,7 +275,7 @@ public class ImportHelper {
         }
     }
 
-    private String parseStalkShape(String attribute) {
+    private static String parseStalkShape(String attribute) {
         switch (attribute) {
             case "e": return "1,";
             case "t": return "0,";
@@ -267,7 +283,7 @@ public class ImportHelper {
         }
     }
 
-    private String parseStalkRoot(String attribute) {
+    private static String parseStalkRoot(String attribute) {
         switch (attribute) {
             case "b": return "1,0,0,0,0,0,0,";
             case "c": return "0,1,0,0,0,0,0,";
@@ -280,7 +296,7 @@ public class ImportHelper {
         }
     }
 
-    private String parseStalkSurface(String attribute) {
+    private static String parseStalkSurface(String attribute) {
         switch (attribute) {
             case "f": return "1,0,0,0,";
             case "y": return "0,1,0,0,";

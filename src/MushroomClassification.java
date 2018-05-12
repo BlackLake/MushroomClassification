@@ -13,7 +13,9 @@ public class MushroomClassification {
 
         readFromURLAndWriteToFile("https://archive.ics.uci.edu/ml/machine-learning-databases/mushroom/agaricus-lepiota.data");
 
-        // ImportHelper.convertDataFiles();
+        ImportHelper.convertDataFiles();
+
+
     }
     
     static void readFromURLAndWriteToFile(String urlString)
