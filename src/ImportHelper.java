@@ -28,7 +28,22 @@ public class ImportHelper {
 
                 // this statement reads the line from the file and print it to
                 // the console.
-                System.out.println(dis.readLine());
+                //System.out.println(dis.readLine());
+
+                String row = dis.readLine();
+                String[] elements = row.split(",");
+
+                if (elements.length != 23) {
+                    throw new IOException("one line without the correct number of attributes");
+                }
+
+                String convertedLine = "";
+
+                for (int i = 0; i < elements.length; i++) {
+
+                }
+
+
 
                 printWriter.println(dis.readLine());
 
@@ -47,5 +62,43 @@ public class ImportHelper {
         }
 
 
+    }
+
+    private String parseCapShape(String attribute) {
+        switch (attribute) {
+            case "b": return "1,0,0,0,0,0,";
+            case "c": return "0,1,0,0,0,0,";
+            case "x": return "0,0,1,0,0,0,";
+            case "f": return "0,0,0,1,0,0,";
+            case "k": return "0,0,0,0,1,0,";
+            case "s": return "0,0,0,0,0,1,";
+            default: return "0,0,0,0,0,0,";
+        }
+    }
+
+    private String parseCapSurface(String attribute) {
+        switch (attribute) {
+            case "f": return "1,0,0,0,";
+            case "g": return "0,1,0,0,";
+            case "y": return "0,0,1,0,";
+            case "s": return "0,0,0,1,";
+            default: return "0,0,0,0,";
+        }
+    }
+
+    private String parseCapColor(String attribute) {
+        switch (attribute) {
+            case "n": return "1,0,0,0,0,0,0,0,0,0,";
+            case "b": return "0,1,0,0,0,0,0,0,0,0,";
+            case "c": return "0,0,1,0,0,0,0,0,0,0,";
+            case "g": return "0,0,0,1,0,0,0,0,0,0,";
+            case "r": return "0,0,0,0,1,0,0,0,0,0,";
+            case "p": return "0,0,0,0,0,1,0,0,0,0,";
+            case "u": return "0,0,0,0,0,0,1,0,0,0,";
+            case "e": return "0,0,0,0,0,0,0,1,0,0,";
+            case "w": return "0,0,0,0,0,0,0,0,1,0,";
+            case "y": return "0,0,0,0,0,0,0,0,0,1,";
+            default: return "0,0,0,0,0,0,0,0,0,0,";
+        }
     }
 }
