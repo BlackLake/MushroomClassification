@@ -1,4 +1,4 @@
-import org.neuroph.*;
+import org.neuroph.core.*;
 
 public class MushroomClassification {
 
