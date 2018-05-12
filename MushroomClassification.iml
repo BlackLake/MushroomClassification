@@ -8,5 +8,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="neuroph-core-2.94" level="project" />
+    <orderEntry type="library" name="neuroph-core-2.94" level="project" />
   </component>
 </module>
