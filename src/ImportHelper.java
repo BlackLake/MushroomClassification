@@ -101,4 +101,93 @@ public class ImportHelper {
             default: return "0,0,0,0,0,0,0,0,0,0,";
         }
     }
+
+    private String parseHabitat(String attribute) {
+        switch (attribute) {
+            case "g": return "1,0,0,0,0,0,0,";
+            case "l": return "0,1,0,0,0,0,0,";
+            case "m": return "0,0,1,0,0,0,0,";
+            case "p": return "0,0,0,1,0,0,0,";
+            case "u": return "0,0,0,0,1,0,0,";
+            case "w": return "0,0,0,0,0,1,0,";
+            case "d": return "0,0,0,0,0,0,1,";
+            default: return "0,0,0,0,0,0,0,";
+        }
+    }
+    private String parsePopulation(String attribute) {
+        switch (attribute) {
+            case "a": return "1,0,0,0,0,0,";
+            case "c": return "0,1,0,0,0,0,";
+            case "n": return "0,0,1,0,0,0,";
+            case "s": return "0,0,0,1,0,0,";
+            case "v": return "0,0,0,0,1,0,";
+            case "y": return "0,0,0,0,0,1,";
+            default: return "0,0,0,0,0,0,";
+        }
+    }
+    private String parseSporePrintColor(String attribute) {
+        switch (attribute) {
+            case "k": return "1,0,0,0,0,0,0,0,0,";
+            case "n": return "0,1,0,0,0,0,0,0,0,";
+            case "b": return "0,0,1,0,0,0,0,0,0,";
+            case "h": return "0,0,0,1,0,0,0,0,0,";
+            case "r": return "0,0,0,0,1,0,0,0,0,";
+            case "o": return "0,0,0,0,0,1,0,0,0,";
+            case "u": return "0,0,0,0,0,0,1,0,0,";
+            case "w": return "0,0,0,0,0,0,0,1,0,";
+            case "y": return "0,0,0,0,0,0,0,0,1,";
+            default: return "0,0,0,0,0,0,0,0,0,";
+        }
+    }
+    private String parseRingType(String attribute) {
+        switch (attribute) {
+            case "c": return "1,0,0,0,0,0,0,0,";
+            case "e": return "0,1,0,0,0,0,0,0,";
+            case "f": return "0,0,1,0,0,0,0,0,";
+            case "l": return "0,0,0,1,0,0,0,0,";
+            case "n": return "0,0,0,0,1,0,0,0,";
+            case "p": return "0,0,0,0,0,1,0,0,";
+            case "s": return "0,0,0,0,0,0,1,0,";
+            case "z": return "0,0,0,0,0,0,0,1,";
+            default: return "0,0,0,0,0,0,0,0,";
+        }
+    }
+    private String parseRingNumber(String attribute) {
+        switch (attribute) {
+            case "n": return "1,0,0,";
+            case "o": return "0,1,0,";
+            case "t": return "0,0,1,";
+            default: return "0,0,0,";
+        }
+    }
+    private String parseVeilColor(String attribute) {
+        switch (attribute) {
+            case "n": return "1,0,0,0,";
+            case "o": return "0,1,0,0,";
+            case "w": return "0,0,1,0,";
+            case "y": return "0,0,0,1,";
+            default: return "0,0,0,0,";
+        }
+    }
+    private String parseVeilType(String attribute) {
+        switch (attribute) {
+            case "p": return "1,0,";
+            case "u": return "0,1,";
+            default: return "0,0,";
+        }
+    }
+    private String parseStalkColor(String attribute) {
+        switch (attribute) {
+            case "n": return "1,0,0,0,0,0,0,0,0,";
+            case "b": return "0,1,0,0,0,0,0,0,0,";
+            case "c": return "0,0,1,0,0,0,0,0,0,";
+            case "g": return "0,0,0,1,0,0,0,0,0,";
+            case "o": return "0,0,0,0,1,0,0,0,0,";
+            case "p": return "0,0,0,0,0,1,0,0,0,";
+            case "e": return "0,0,0,0,0,0,1,0,0,";
+            case "w": return "0,0,0,0,0,0,0,1,0,";
+            case "y": return "0,0,0,0,0,0,0,0,1,";
+            default: return "0,0,0,0,0,0,0,0,0,";
+        }
+    }
 }
