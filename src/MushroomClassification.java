@@ -182,8 +182,10 @@ public class MushroomClassification {
                     System.out.println("mushroom number " + totalCounter + " is posionus");
                 }
             } else if (networkOutput[0] == 0 && networkOutput[1] == 1) {
+                System.out.println("mushroom number " + totalCounter + " is edible   (FALSE)");
                 numberOfPoisonousClassifiedAsEdible++;
             } else if (networkOutput[0] == 1 && networkOutput[1] == 0) {
+                System.out.println("mushroom number " + totalCounter + " is posionus (FALSE)");
                 numberOfEdiblesClassifiedAsPoisonous++;
             }
             totalCounter++;
@@ -192,10 +194,10 @@ public class MushroomClassification {
         }
         System.out.println();
         System.out.println("                       FINAL RESULTS");
-        System.out.println("Correctly predicted instances               :  " + trueCounter);
         System.out.println("Total test instances                        :  " + totalCounter);
-        System.out.println("Number of poisonous classified as edible    :  " + numberOfPoisonousClassifiedAsEdible);
-        System.out.println("Number of edibles classified as poisonous   :  " + numberOfEdiblesClassifiedAsPoisonous);
+        System.out.println("Correctly predicted instances               :  " + trueCounter + "\t(" + ((double) trueCounter / totalCounter) * 100 + " %)");
+        System.out.println("Number of poisonous classified as edible    :  " + numberOfPoisonousClassifiedAsEdible + "\t(" + ((double) numberOfPoisonousClassifiedAsEdible / totalCounter) * 100 + " %)");
+        System.out.println("Number of edibles classified as poisonous   :  " + numberOfEdiblesClassifiedAsPoisonous + "\t(" + ((double) numberOfEdiblesClassifiedAsPoisonous / totalCounter) * 100 + " %)");
         System.out.println("Percentage : " + ((double) trueCounter / totalCounter) * 100 + " %");
     }
 
