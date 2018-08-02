@@ -10,7 +10,7 @@ _p,x,s,n,t,p,f,c,n,k,e,e,s,s,w,w,p,w,o,p,k,s,u_
 
 The first letter is either p for a poisonous or e for a edible mushroom instance. All the other letters are attributes which can have various values. The ImportHelper class converts every row of the dataset into the following structure:
 
-_0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,1,0,0__,0,0,0,0,0,1,0,0,0…_
+_0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,1,0,0,0…_
 
 This binary values for each column is readable for the neural network interface. Every attribute of the original structure is divided into x attributes of the new structure. x means the amount of values of the corresponding attribute. The result, if the mushroom is poisonous or edible is appended to the string at the end with &quot;,0,1&quot; for edible and &quot;,1,0&quot; for poisonous.
 
