@@ -1,4 +1,4 @@
-# IDESCRIPTION OF PROJECT
+# DESCRIPTION OF PROJECT
 
 In this project a neuronal network gets trained to learn classifying a given dataset of attributes of mushrooms.
 
