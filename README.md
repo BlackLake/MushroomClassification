@@ -1,10 +1,10 @@
-1. **I** DESCRIPTION OF PROJECT
+# IDESCRIPTION OF PROJECT
 
 In this project a neuronal network gets trained to learn classifying a given dataset of attributes of mushrooms.
 
-The given dataset of attributes of mushrooms is a dataset form the UCI Machine Learning Repository 0. For training the neural network two third of the dataset is used. The other third of instances is used for testing the network.
+The given dataset of attributes of mushrooms is a dataset form the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets.html). For training the neural network two third of the dataset is used. The other third of instances is used for testing the network.
 
-The project is implemented in Java. For training and testing the neural network the Java library &quot;Java Neural Network Framework&quot; 0 was used. Before using the interface of this library the dataset has to be converted into a readable format. For this conversion the ImportHelper Class in ImportHelper.java is used. The dataset has the following structure:
+The project is implemented in Java. For training and testing the neural network the Java library &quot;[Java Neural Network Framework](http://neuroph.sourceforge.net/)&quot; was used. Before using the interface of this library the dataset has to be converted into a readable format. For this conversion the ImportHelper Class in ImportHelper.java is used. The dataset has the following structure:
 
 _p,x,s,n,t,p,f,c,n,k,e,e,s,s,w,w,p,w,o,p,k,s,u_
 
@@ -43,7 +43,3 @@ _Correct classified ratio                                 :  90.54652880354506 %
 The constant variables that can be adjusted are the parameters of the neural network. One constant is the learning rate, and the other one is the momentum.
 
 With a total number of 8124 instances the neural network has an average correct classified ratio of 90 %.
-
-0 https://archive.ics.uci.edu/ml/datasets.html
-
-0 http://neuroph.sourceforge.net/
